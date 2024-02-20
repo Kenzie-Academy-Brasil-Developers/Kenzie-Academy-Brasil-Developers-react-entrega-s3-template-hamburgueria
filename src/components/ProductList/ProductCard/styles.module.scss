@@ -1,0 +1,74 @@
+@import "../../../styles/globalStyle.scss";
+
+.listProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2.5px solid var(--grey-100);
+  border-radius: 0.35rem;
+  height: 24rem;
+
+  position: relative;
+  &:hover {
+    border: 0.1563rem solid var(--color-primary);
+  }
+  .imgContainer {
+    width: 350px;
+    height: 48%;
+    background-color: var(--grey-0);
+    display: flex;
+    justify-content: center;
+  }
+
+  .img {
+    width: 55%;
+  }
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    height: 12.5rem;
+    width: 90%;
+    h3 {
+      @extend %h3;
+    }
+    .category {
+      @extend %caption;
+      color: var(--grey-300);
+    }
+    .price {
+      @extend %body;
+      color: var(--color-primary);
+    }
+    button {
+      @extend %body;
+      background-color: var(--grey-300);
+      color: var(--grey-0);
+      width: 42%;
+      padding: 0.9375rem;
+      border-radius: 0.4375rem;
+      &:hover {
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}
+
+@media (min-width: 795px) {
+  .listProduct {
+    width: 310px;
+
+    .imgContainer {
+      width: 100%;
+    }
+
+    .img {
+      width: 200px;
+    }
+  }
+  .infoContainer {
+    padding: 1rem 0;
+  }
+}

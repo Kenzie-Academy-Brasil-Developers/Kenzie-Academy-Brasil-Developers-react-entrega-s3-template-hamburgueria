@@ -1,0 +1,46 @@
+@import "../../styles/globalStyle.scss";
+
+.headerContainer {
+  background-color: (var(--grey-0));
+  padding: 1.5rem;
+  position: static;
+  div {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .cart {
+      background-color: transparent;
+      border: none;
+      color: var(--grey-300);
+
+      .cartItemCount {
+        background-color: var(--color-primary);
+        border-radius: 0.5rem;
+        padding: 0.25rem 0.4063rem;
+        color: var(--grey-0);
+        @extend %bodyBold;
+        position: relative;
+        top: -18px;
+        right: 7px;
+        font-family: var(--font-family);
+      }
+    }
+  }
+  .searchForm {
+    display: none;
+  }
+}
+
+@media (min-width: 795px) {
+  .headerContainer {
+    padding: 1.5rem 0;
+
+    div {
+      width: 100%;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import url(./reset.scss);
+@import url(./globalStyle.scss);
+
+.mainContainer {
+  justify-content: center;
+  padding: 30px 0;
+  position: sticky;
+}
+
+@media (min-width: 795px) {
+  .mainContainer {
+    max-width: 2560px;
+    width: 93%;
+    margin: 0 auto;
+  }
+}
